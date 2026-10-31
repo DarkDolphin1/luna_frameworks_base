@@ -993,9 +993,6 @@ public class PowerInsightService extends IPowerInsightService.Stub {
     }
 
     private int getTotalCapacityMah() {
-        int chargeDesign = readBatteryInt("charge_full_design");
-        if (chargeDesign > 20000) chargeDesign /= 1000;
-        if (chargeDesign > 0) return chargeDesign;
 
         int chargeFull = readBatteryInt("charge_full");
         if (chargeFull > 20000) chargeFull /= 1000;
